@@ -14,10 +14,10 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/web-server-listener.git
+git clone git@github.com:781732825/localhost_test_web.git
 
 # 进入项目目录
-cd web-server-listener
+cd localhost_test_web
 
 # 编译
 go build -o host
@@ -33,11 +33,11 @@ go build -o host
 {
   "ports": [
     {
-      "port": 8080,
+      "port": 80,
       "https": false
     },
     {
-      "port": 8443,
+      "port": 443,
       "https": true,
       "cert": "path/to/cert.pem",
       "key": "path/to/key.pem"
@@ -109,6 +109,18 @@ go build -o host
 5. 根据请求的路径和参数匹配规则
 6. 如果匹配成功，返回规则中定义的响应
 7. 如果没有匹配的规则，返回默认响应
+
+
+## 其他文件说明
+
+1、generate_cert.ps1 用于通过 Openssl 生成本地自签名的SSL证书脚本，生成的证书存放在 certs 目录下，用于https访问。
+
+2、rules目录 ： 规则存放目录，将会根据规则目录的配置的json文件进行返回匹配的数据。
+
+3、rules目录下的 tlxreog.ydfyzaqd.com.json   和   example.com.json 用于测试的本地访问域名，您可以在 hosts 中添加该两个域名，然后使用浏览器访问这两个json中定义的项目即可测试。文本、json、图像、文件、音频等数据的返回。
+
+4、build目录 ： 已编译好的二进制文件，请将config.json 和 rules 规则目录放在 二进制文件 同级目录下即可运行。 如果需要监听HTTPS，那么还需要 certs 证书目录和证书文件。
+
 
 ## 许可证
 

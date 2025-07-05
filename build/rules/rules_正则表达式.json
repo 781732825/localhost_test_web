@@ -1,0 +1,49 @@
+{
+  "examples": [
+    {
+      "description": "精确匹配路径",
+      "path": "/api/users",
+      "explanation": "完全匹配/api/users路径"
+    },
+    {
+      "description": "匹配数字ID",
+      "path": "^/api/users/\\d+$",
+      "explanation": "匹配形如/api/users/123的路径，其中123可以是任意数字"
+    },
+    {
+      "description": "匹配UUID",
+      "path": "^/api/users/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "explanation": "匹配形如/api/users/550e8400-e29b-41d4-a716-446655440000的路径"
+    },
+    {
+      "description": "匹配文件扩展名",
+      "path": "^/static/.*\\.(?:jpg|png|gif|svg)$",
+      "explanation": "匹配/static/目录下的图片文件"
+    },
+    {
+      "description": "匹配可选参数",
+      "path": "^/api/products(/\\d+)?$",
+      "explanation": "匹配/api/products和/api/products/123"
+    },
+    {
+      "description": "匹配多级路径",
+      "path": "^/api/v\\d+/.*$",
+      "explanation": "匹配所有以/api/v1/、/api/v2/等开头的路径"
+    },
+    {
+      "description": "匹配查询参数",
+      "path": "^/search$",
+      "explanation": "匹配/search路径，不考虑查询参数"
+    },
+    {
+      "description": "匹配RESTful资源",
+      "path": "^/api/(?:users|products|orders)(?:/\\d+)?$",
+      "explanation": "匹配/api/users、/api/products、/api/orders及其ID子路径"
+    },
+    {
+      "description": "匹配所有路径",
+      "path": ".*",
+      "explanation": "匹配任意路径，通常用作兜底规则"
+    }
+  ]
+}

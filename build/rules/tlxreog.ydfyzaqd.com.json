@@ -1,0 +1,80 @@
+{
+  "rules": [
+    {
+      "path": "/api/users",
+      "method": "GET",
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/plain; charset=utf-8"
+        },
+        "body": "{\"name\":\"John\",\"age\":30}"
+      }
+    },
+    {
+      "path": "^/api/users/\\d+$",
+      "method": "GET",
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": "{\"id\":123,\"name\":\"John Doe\",\"email\":\"john@example.com\"}"
+      }
+    },
+    {
+      "path": "/api/login",
+      "method": "POST",
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": "{\"token\":\"abc123\"}"
+      }
+    },
+    {
+      "path": "/images/logo.svg",
+      "method": "GET",
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "image/svg+xml"
+        },
+        "body": "图片加载失败",
+        "file": "D:\\project\\Trae\\host\\examples\\logo.svg"
+      }
+    },
+    {
+      "path": "/file/test.zip",
+      "method": "GET",
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/octet-stream"
+        },
+        "body": "图片加载失败",
+        "file": "D:\\project\\Trae\\host\\examples\\host.zip"
+      }
+    },
+    {
+      "path": "/documents/readme.txt",
+      "method": "GET",
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/plain; charset=utf-8"
+        },
+        "body": "文本文件加载失败",
+        "file": "D:\\project\\Trae\\host\\examples\\readme.txt"
+      }
+    }
+  ],
+  "default": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8"
+    },
+    "body": "No matching rule found"
+  }
+}
