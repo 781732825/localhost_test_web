@@ -1,0 +1,15 @@
+{
+    "ports":  [
+                  {
+                      "port":  80,
+                      "https":  false
+                  },
+                  {
+                      "port":  443,
+                      "https":  true,
+                      "cert":  "certs\\server.crt",
+                      "key":  "certs\\server.key"
+                  }
+              ],
+    "defaultResponse":  "No matching rule found"
+}

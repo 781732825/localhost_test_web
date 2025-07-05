@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#f0f0f0" />
+  <text x="50%" y="50%" font-family="Arial" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#333">
+    Trae Logo
+  </text>
+  <circle cx="40" cy="50" r="20" fill="#3498db" />
+  <rect x="140" y="30" width="40" height="40" fill="#e74c3c" />
+</svg>
